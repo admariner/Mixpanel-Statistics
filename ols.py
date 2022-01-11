@@ -89,9 +89,7 @@ class ols:
         Calculates the Durbin-Waston statistic
         """
         de = diff(self.e,1)
-        dw = dot(de,de) / dot(self.e,self.e);
-
-        return dw
+        return dot(de,de) / dot(self.e,self.e)
 
     def omni(self):
         """
